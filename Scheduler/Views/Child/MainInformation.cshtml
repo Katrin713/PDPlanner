@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "MainInformation";
+}
+<head>
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker').datepicker({
+                inline: true,
+                showOtherMonths: true,
+                dateFormat: "yy-mm-dd",
+                monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                firstDay: 1
+            });
+        });
+    </script>
+</head>
+<div>
+    <div class="calendar">
+        <div id="datepicker"></div>
+    </div>
+</div>

@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ChildController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginPageController.cs" />
     <Compile Include="Controllers\StartController.cs" />
@@ -161,11 +162,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\datepicker.css" />
     <Content Include="css\main.css" />
-    <Content Include="favicon.ico" />
+    <Content Include="css\normalize.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\arrow.png" />
+    <Content Include="img\darkdenim3.png" />
+    <Content Include="img\dark_leather.png" />
     <Content Include="img\icon.png" />
     <Content Include="img\favicon.ico" />
     <Content Include="Scripts\bootstrap.js" />
@@ -174,11 +179,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.18.custom.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -201,6 +208,8 @@
     <Content Include="Views\LoginPage\BasePage.cshtml" />
     <Content Include="Views\LoginPage\RegisterPage.cshtml" />
     <Content Include="Views\Start\Index.cshtml" />
+    <Content Include="Views\Child\Workplace.cshtml" />
+    <Content Include="Views\Child\MainInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
