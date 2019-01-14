@@ -18,5 +18,10 @@ namespace Scheduler.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult Tasks()
+        {
+            return PartialView();
+        }
     }
 }

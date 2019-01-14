@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "Tasks";
+}
+
+<div>
+    <div class="lists">
+        <fieldset class="group">
+            <legend>Твои задания на день:</legend>
+            <ul class="checkbox main">
+                <li>
+                    <details id="details_cb1">
+                        <summary>
+                            <label class="container">
+                                Утренний ритуал
+                                <input type="checkbox" id="cb1" value="cheese" onclick="UpdateMainAim('cb1')" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </summary>
+                        <ul class="checkbox">
+                            <li>
+                                <label class="container">
+                                    Заправить кровать
+                                    <input type="checkbox" id="cb_1" value="cheese" name="inp_cb1" onclick="UpdateAims('cb1', 'cb_1')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb_1" name="cb1" value="0" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">
+                                    Переодеться
+                                    <input type="checkbox" id="cb_2" value="cheese" name="inp_cb1" onclick="UpdateAims('cb1', 'cb_2')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb_2" name="cb1" value="0" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">
+                                    Сделать зарядку
+                                    <input type="checkbox" id="cb_3" value="cheese" name="inp_cb1" onclick="UpdateAims('cb1', 'cb_3')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb_3" name="cb1" value="0" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">
+                                    Умыться
+                                    <input type="checkbox" id="cb_4" value="cheese" name="inp_cb1" onclick="UpdateAims('cb1', 'cb_4')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb_4" name="cb1" value="0" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">
+                                    Позавтракать
+                                    <input type="checkbox" id="cb_5" value="cheese" name="inp_cb1" onclick="UpdateAims('cb1', 'cb_5')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb_5" name="cb1" value="0" />
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+
+            <ul class="checkbox main">
+                <li>
+                    <details id="details_cb2">
+                        <summary>
+                            <label class="container">
+                                Утренний ритуал
+                                <input type="checkbox" id="cb2" value="cheese" onclick="UpdateMainAim('cb2')" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </summary>
+                        <ul class="checkbox">
+                            <li>
+                                <label class="container">
+                                    Заправить кровать
+                                    <input type="checkbox" id="cb2_1" value="cheese" name="inp_cb2" onclick="UpdateAims('cb2', 'cb2_1')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb2_1" name="cb2" value="0" />
+                                </label>
+                            </li>
+                            <li>
+                                <label class="container">
+                                    Переодеться
+                                    <input type="checkbox" id="cb2_2" value="cheese" name="inp_cb1" onclick="UpdateAims('cb2', 'cb2_2')" />
+                                    <span class="checkmark"></span>
+                                    <input type="hidden" id="hid_cb2_2" name="cb2" value="0" />
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+</div>
+<script>
+    function UpdateAims(elem, curId) {
+        document.getElementById(elem).checked = false;
+        if (document.getElementById("hid_" + curId).value == "0") {
+            document.getElementById("hid_" + curId).value = "1";
+        }
+        else {
+            document.getElementById("hid_" + curId).value = "0";
+        }
+
+        var smallEvents = document.getElementsByName(elem);
+        for (var i = 0; i < smallEvents.length; i++) {
+            if (smallEvents[i].value == '0') {
+                return;
+            }
+        }
+        document.getElementById(elem).checked = true;
+    }
+    function UpdateMainAim(elem) {
+        $('#details_' + elem).removeAttr("open");  
+        var smallEvents = document.getElementsByName("inp_" + elem);
+        var checkedMain = document.getElementById(elem).checked;
+
+        for (var i = 0; i < smallEvents.length; i++) {
+            smallEvents[i].checked = checkedMain;
+            document.getElementById("hid_" + smallEvents[i].id).value = (checkedMain == true) ? "1" : "0";
+        }
+    }
+</script>

@@ -173,6 +173,8 @@
     <Content Include="img\dark_leather.png" />
     <Content Include="img\icon.png" />
     <Content Include="img\favicon.ico" />
+    <Content Include="img\play-button-down.png" />
+    <Content Include="img\play-button.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -210,6 +212,7 @@
     <Content Include="Views\Start\Index.cshtml" />
     <Content Include="Views\Child\Workplace.cshtml" />
     <Content Include="Views\Child\MainInformation.cshtml" />
+    <Content Include="Views\Child\Tasks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
