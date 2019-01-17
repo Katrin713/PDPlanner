@@ -62,38 +62,46 @@
                     </details>
                 </li>
             </ul>
-
-            <ul class="checkbox main">
+            <ul class="checkbox main only">
                 <li>
-                    <details id="details_cb2">
-                        <summary>
-                            <label class="container">
-                                Утренний ритуал
-                                <input type="checkbox" id="cb2" value="cheese" onclick="UpdateMainAim('cb2')" />
-                                <span class="checkmark"></span>
-                            </label>
-                        </summary>
-                        <ul class="checkbox">
-                            <li>
-                                <label class="container">
-                                    Заправить кровать
-                                    <input type="checkbox" id="cb2_1" value="cheese" name="inp_cb2" onclick="UpdateAims('cb2', 'cb2_1')" />
-                                    <span class="checkmark"></span>
-                                    <input type="hidden" id="hid_cb2_1" name="cb2" value="0" />
-                                </label>
-                            </li>
-                            <li>
-                                <label class="container">
-                                    Переодеться
-                                    <input type="checkbox" id="cb2_2" value="cheese" name="inp_cb1" onclick="UpdateAims('cb2', 'cb2_2')" />
-                                    <span class="checkmark"></span>
-                                    <input type="hidden" id="hid_cb2_2" name="cb2" value="0" />
-                                </label>
-                            </li>
-                        </ul>
-                    </details>
+                    <label class="container">
+                        Сходить в школу
+                        <input type="checkbox" id="cb3" value="cheese" onclick="UpdateMainAim('cb3')" />
+                        <span class="checkmark"></span>
+                    </label>
                 </li>
             </ul>
+                        <ul class="checkbox main">
+                            <li>
+                                <details id="details_cb2">
+                                    <summary>
+                                        <label class="container">
+                                            Дела по дому
+                                            <input type="checkbox" id="cb2" value="cheese" onclick="UpdateMainAim('cb2')" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </summary>
+                                    <ul class="checkbox">
+                                        <li>
+                                            <label class="container">
+                                                Пропылесосить
+                                                <input type="checkbox" id="cb2_1" value="cheese" name="inp_cb2" onclick="UpdateAims('cb2', 'cb2_1')" />
+                                                <span class="checkmark"></span>
+                                                <input type="hidden" id="hid_cb2_1" name="cb2" value="0" />
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="container">
+                                                Помыть посуду
+                                                <input type="checkbox" id="cb2_2" value="cheese" name="inp_cb2" onclick="UpdateAims('cb2', 'cb2_2')" />
+                                                <span class="checkmark"></span>
+                                                <input type="hidden" id="hid_cb2_2" name="cb2" value="0" />
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
         </fieldset>
     </div>
 </div>

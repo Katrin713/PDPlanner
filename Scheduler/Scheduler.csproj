@@ -164,13 +164,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
     <Content Include="css\main.css" />
-    <Content Include="css\normalize.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="img\arrow.png" />
-    <Content Include="img\darkdenim3.png" />
-    <Content Include="img\dark_leather.png" />
     <Content Include="img\icon.png" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\play-button-down.png" />
