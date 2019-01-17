@@ -23,5 +23,10 @@ namespace Scheduler.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult AllDay()
+        {
+            return PartialView();
+        }
     }
 }

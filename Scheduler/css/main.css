@@ -132,7 +132,12 @@ a {
 }
 .right {
     margin-left: 5px;
-    flex-basis: 79.5%;
+    flex-basis: 40.5%;
+    height: 100%;
+}
+.last {
+    margin-left: 5px;
+    flex-basis: 39.5%;
     height: 100%;
 }
 .main_content .menu ul li a.button {
