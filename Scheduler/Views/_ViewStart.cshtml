@@ -62,60 +62,127 @@
 
     <div style="display: none;" id="login" class="modal generic-modal">
         <div class="loginbox-v4">
-                <div class="loginbox-v4__header">
-                    Войдите в учетную запись PDPlanner!
-                </div>
+            <div class="loginbox-v4__header">
+                Войдите в учетную запись PDPlanner!
+            </div>
 
-                <div class="loginbox-v4__content">
-                    <span class="ud-app-loader ud-component--auth--app ud-app-loaded" data-module-id="auth">
+            <div class="loginbox-v4__content">
+                <span class="ud-app-loader ud-component--auth--app ud-app-loaded" data-module-id="auth">
                     <div>
-                    <a href="/" data-purpose="facebook-link" class="fxac social-buttons--social-btn--1JTo2 facebook-auth--social-btn--facebook--3SDC_">
-                        <span class="social-buttons--social-icon--3jP8h facebook-auth--social-icon--3wyy2 udi udi-facebook-f"></span>
-                        Войти через Facebook
-                    </a>
+                        <a href="/" data-purpose="facebook-link" class="fxac social-buttons--social-btn--1JTo2 facebook-auth--social-btn--facebook--3SDC_">
+                            <span class="social-buttons--social-icon--3jP8h facebook-auth--social-icon--3wyy2 udi udi-facebook-f"></span>
+                            Войти через Facebook
+                        </a>
                     </div>
                     <div>
                         <a href="/" data-purpose="google-link" class="fxac social-buttons--social-btn--1JTo2 google-auth--social-btn--google--1H6_f">
-                        <span class="social-buttons--social-icon--3jP8h google-auth--social-icon--3uKst udi udi-google-plus"></span>
-                        Войти через Google
+                            <span class="social-buttons--social-icon--3jP8h google-auth--social-icon--3uKst udi udi-google-plus"></span>
+                            Войти через Google
                         </a>
                     </div>
-                    </span>
-                    <form signin-box-class-name="js-signin-box" name="login-form" class="signin-form dj ng-pristine ng-valid" id="login-form" method="post">
-                        <input type="hidden" name="csrfmiddlewaretoken" autocomplete="off"> 
-                        <div class="manage-fields-wrapper">
-                            <input type="hidden" name="locale" value="ru_RU" autocomplete="off">
-                            <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-email" ng-non-bindable="">
-                                <div>
-                                    <input name="email" required="" maxlength="64" minlength="7" placeholder="Адрес электронной почты" data-purpose="email" type="email" class="form-control" value="">
-                                </div>
-                            </div>
-                            <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-password" ng-non-bindable="">
-                                <div>
-                                    <input type="password" name="password" placeholder="Пароль" required="" maxlength="64" data-purpose="password" id="id_password" class="textinput textInput form-control" minlength="6">
-                                </div>
+                </span>
+                <form signin-box-class-name="js-signin-box" name="login-form" class="signin-form dj ng-pristine ng-valid" id="login-form" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" autocomplete="off">
+                    <div class="manage-fields-wrapper">
+                        <input type="hidden" name="locale" value="ru_RU" autocomplete="off">
+                        <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-email" ng-non-bindable="">
+                            <div>
+                                <input name="email" required="" maxlength="64" minlength="7" placeholder="Адрес электронной почты" data-purpose="email" type="email" class="form-control" value="">
                             </div>
                         </div>
-
-                        <div class="form-actions">
-                            <div class="submit-row">
-                                <input type="submit" name="submit" value="Войти" class="btn btn-primary " id="submit-id-submit" data-purpose="do-login">
-                                <span>или </span><a href="" class="cancel-link" style="    color: #007791;">Забыли пароль?</a>
+                        <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-password" ng-non-bindable="">
+                            <div>
+                                <input type="password" name="password" placeholder="Пароль" required="" maxlength="64" data-purpose="password" id="id_password" class="textinput textInput form-control" minlength="6">
                             </div>
-
                         </div>
-                    </form>
-                    <div class="loginbox-v4__separator"></div>
-                </div>
+                    </div>
 
-                <div class="loginbox-v4__footer">
-                    Не зарегистрированы?
-                    <a class="sign-link" href="/join/signup-popup/?display_type=popup&amp;locale=ru_RU&amp;next=https://www.udemy.com/&amp;ref=&amp;response_type=json&amp;xref=" data-purpose="sign-up">
-                        Регистрация
-                    </a>
-                </div>
+                    <div class="form-actions">
+                        <div class="submit-row">
+                            <input type="submit" name="submit" value="Войти" class="btn btn-primary " id="submit-id-submit" data-purpose="do-login">
+                            <span>или </span><a href="" class="cancel-link" style="    color: #007791;">Забыли пароль?</a>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="loginbox-v4__separator"></div>
+            </div>
+
+            <div class="loginbox-v4__footer">
+                Не зарегистрированы?
+                <a class="sign-link" href="#" data-purpose="sign-up" onclick="OpenRegistration();">
+                    Регистрация
+                </a>
+            </div>
         </div>
-        <button data-purpose="close-popup" aria-label="Close" type="button" class="close btn btn-default"><span aria-hidden="true">×</span></button>
+        <button data-purpose="close-popup" aria-label="Close" type="button" class="close btn btn-default" onclick="CloseFancybox();"><span aria-hidden="true">×</span></button>
+    </div>
+    <div style="display: none;" id="registration" class="modal generic-modal">
+        <div class="loginbox-v4">
+            <div class="loginbox-v4__header">
+                Зарегистрируйтесь и начните планировать!
+            </div>
+
+            <div class="loginbox-v4__content">
+                <form signin-box-class-name="js-signin-box" name="login-form" class="signin-form dj ng-pristine ng-valid" id="login-form-registration" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" autocomplete="off">
+                    <div class="manage-fields-wrapper">
+                        <input type="hidden" name="locale" value="ru_RU" autocomplete="off">
+                        <div id="tooltip-reference-fullname" class="tooltip-reference pos-r " ng-non-bindable="">
+                            <div>
+                                <input type="text" name="fullname" minlength="2" class="textinput textInput form-control user-error" data-purpose="fullname" maxlength="64" placeholder="Полное имя" required="" id="id_fullname" aria-invalid="true">
+                            </div>
+                        </div>
+                        <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="tooltip-reference-email" ng-non-bindable="">
+                            <div>
+                                <input name="email" required="" maxlength="64" minlength="7" placeholder="Адрес электронной почты" data-purpose="email" type="email" class="form-control" value="">
+                            </div>
+                        </div>
+                        <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="tooltip-reference-password" ng-non-bindable="">
+                            <div>
+                                <input type="password" name="password" placeholder="Пароль" required="" maxlength="64" data-purpose="password" id="id_password_registration" class="textinput textInput form-control" minlength="6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="submit-row">
+                            <input type="submit" name="submit" value="Зарегестрироваться" class="btn btn-primary " id="submit-id-submit-registration" data-purpose="do-login">
+                        </div>
+                    </div>
+                </form>
+                <div class="loginbox-v4__separator"></div>
+            </div>
+
+            <div class="loginbox-v4__footer">
+                Уже зарегистрировались?
+                <a class="sign-link" href="#" onclick="OpenEntrance();" data-purpose="sign-up">
+                    Войти
+                </a>
+            </div>
+        </div>
+        <button data-purpose="close-popup" aria-label="Close" type="button" class="close btn btn-default" onclick="CloseFancybox();"><span aria-hidden="true">×</span></button>
     </div>
 
 </body>
+
+<script>
+    function OpenRegistration() {
+        $.fancybox.close();
+        $.fancybox.open({
+            src: '#registration',
+            type: 'inline'          
+        });
+    }
+
+    function OpenEntrance() {
+        $.fancybox.close();
+        $.fancybox.open({
+            src: '#login',
+            type: 'inline'
+        });
+    }
+    function CloseFancybox() {
+        $.fancybox.close();
+    }
+</script>

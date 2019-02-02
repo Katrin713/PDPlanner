@@ -170,6 +170,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\user.png" />
     <Content Include="img\facebook.png" />
     <Content Include="img\g-logo.svg" />
     <Content Include="img\password.png" />

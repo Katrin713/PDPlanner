@@ -501,7 +501,9 @@ button.close {
     transition: border-color ease-in-out .08s,box-shadow ease-in-out .08s;
 }
 
-.loginbox-v4 .manage-fields-wrapper input[type=email], .loginbox-v4 .manage-fields-wrapper input[type=password] {
+.loginbox-v4 .manage-fields-wrapper input[type=email],
+.loginbox-v4 .manage-fields-wrapper input[type=text],
+.loginbox-v4 .manage-fields-wrapper input[type=password] {
     border-radius: 5px;
     color: #29303B;
     font-size: 24px;
@@ -512,8 +514,15 @@ button.close {
 .loginbox-v4 #form-item-email:before {
     content: url(../img/mail.png);
 }
+.loginbox-v4 #tooltip-reference-email:before {
+    content: url(../img/mail.png);
+}
 
-.loginbox-v4 #form-item-email:before, .loginbox-v4 #form-item-password:before {
+.loginbox-v4 #form-item-email:before,
+.loginbox-v4 #form-item-password:before,
+.loginbox-v4 #tooltip-reference-fullname:before,
+.loginbox-v4 #tooltip-reference-email:before,
+.loginbox-v4 #tooltip-reference-password:before {
     color: #CACBCC;
     font-size: 16px;
     left: 9px;
@@ -525,10 +534,16 @@ button.close {
     width: 24px;
     z-index: 2;
 }
-
+.loginbox-v4 #tooltip-reference-fullname:before {
+    content: url(../img/user.png);
+}
 .loginbox-v4 #form-item-password:before {
     content: url(../img/password.png);
 }
+.loginbox-v4 #tooltip-reference-password:before {
+    content: url(../img/password.png);
+}
+
 
 .loginbox-v4 .form-actions {
     margin: 0 0 16px 0;
