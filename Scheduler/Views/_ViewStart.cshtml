@@ -15,6 +15,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/main.css">
+    <link href="../css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link href='../css/fullcalendar.min.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src='../Scripts/lib/moment.min.js'></script>
+    <script src='../Scripts/fullcalendar.min.js'></script>
+    <script src='../Scripts/ru.js'></script>
+    <script src='../Scripts/jquery.fancybox.js'></script>
+    <script src='../Scripts/jquery.fancybox.min.js'></script>
     <title>Управляй своим временем</title>
 </head>
 <body>
@@ -36,7 +48,7 @@
                                     <a rel="nofollow" href="/features">Обзор</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/download" class="button">Войти</a>
+                                    <a data-fancybox data-src="#login" href="javascript:;" class="button">Войти</a>
                                 </li>
                             </ul>
                         </div>
@@ -45,7 +57,65 @@
                 </div>
             </header>
         </div>
-       
+
+    </div>
+
+    <div style="display: none;" id="login" class="modal generic-modal">
+        <div class="loginbox-v4">
+                <div class="loginbox-v4__header">
+                    Войдите в учетную запись PDPlanner!
+                </div>
+
+                <div class="loginbox-v4__content">
+                    <span class="ud-app-loader ud-component--auth--app ud-app-loaded" data-module-id="auth">
+                    <div>
+                    <a href="/" data-purpose="facebook-link" class="fxac social-buttons--social-btn--1JTo2 facebook-auth--social-btn--facebook--3SDC_">
+                        <span class="social-buttons--social-icon--3jP8h facebook-auth--social-icon--3wyy2 udi udi-facebook-f"></span>
+                        Войти через Facebook
+                    </a>
+                    </div>
+                    <div>
+                        <a href="/" data-purpose="google-link" class="fxac social-buttons--social-btn--1JTo2 google-auth--social-btn--google--1H6_f">
+                        <span class="social-buttons--social-icon--3jP8h google-auth--social-icon--3uKst udi udi-google-plus"></span>
+                        Войти через Google
+                        </a>
+                    </div>
+                    </span>
+                    <form signin-box-class-name="js-signin-box" name="login-form" class="signin-form dj ng-pristine ng-valid" id="login-form" method="post">
+                        <input type="hidden" name="csrfmiddlewaretoken" autocomplete="off"> 
+                        <div class="manage-fields-wrapper">
+                            <input type="hidden" name="locale" value="ru_RU" autocomplete="off">
+                            <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-email" ng-non-bindable="">
+                                <div>
+                                    <input name="email" required="" maxlength="64" minlength="7" placeholder="Адрес электронной почты" data-purpose="email" type="email" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div class="form-field-container  labeled ud-component--social-auth--django-email-field" id="form-item-password" ng-non-bindable="">
+                                <div>
+                                    <input type="password" name="password" placeholder="Пароль" required="" maxlength="64" data-purpose="password" id="id_password" class="textinput textInput form-control" minlength="6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="submit-row">
+                                <input type="submit" name="submit" value="Войти" class="btn btn-primary " id="submit-id-submit" data-purpose="do-login">
+                                <span>или </span><a href="" class="cancel-link" style="    color: #007791;">Забыли пароль?</a>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="loginbox-v4__separator"></div>
+                </div>
+
+                <div class="loginbox-v4__footer">
+                    Не зарегистрированы?
+                    <a class="sign-link" href="/join/signup-popup/?display_type=popup&amp;locale=ru_RU&amp;next=https://www.udemy.com/&amp;ref=&amp;response_type=json&amp;xref=" data-purpose="sign-up">
+                        Регистрация
+                    </a>
+                </div>
+        </div>
+        <button data-purpose="close-popup" aria-label="Close" type="button" class="close btn btn-default"><span aria-hidden="true">×</span></button>
     </div>
 
 </body>

@@ -164,10 +164,16 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\datepicker.css" />
     <Content Include="css\fullcalendar.min.css" />
+    <Content Include="css\jquery.fancybox.css" />
+    <Content Include="css\jquery.fancybox.min.css" />
     <Content Include="css\main.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\g-logo.svg" />
+    <Content Include="img\password.png" />
+    <Content Include="img\mail.png" />
     <Content Include="img\icon.png" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\play-button-down.png" />
@@ -186,6 +192,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.18.custom.min.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
